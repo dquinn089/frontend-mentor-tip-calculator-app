@@ -27,7 +27,7 @@ body {
     font-weight: 700;
 }
 
-picture {
+header {
     padding: 2rem;
     align-self: center;
 }
@@ -309,7 +309,7 @@ tip-options-list li:nth-child(2) { grid-area: tip2; }
         padding: 2rem;
     }
 
-    picture {
+    header {
         padding: 2rem;
     }
 
@@ -318,11 +318,11 @@ tip-options-list li:nth-child(2) { grid-area: tip2; }
 @media screen and (min-width: 815px) {
 
     body {
-        padding: 4rem;
+        padding: 3rem;
     }
 
-    picture {
-        padding: 4rem;
+    header {
+        padding: 2rem;
     }
 
     main {
@@ -362,16 +362,20 @@ tip-options-list li:nth-child(2) { grid-area: tip2; }
         display: flex;
         gap: 2rem;
     }
+
+    .attribution {
+        margin-top: 2rem;
+    }
 }
 
 @media screen and (min-width: 1025px) {
 
     body {
-        padding: 4rem;
+        padding: 2rem;
     }
 
-    picture {
-        padding: 4rem;
+    header {
+        padding: 3rem;
     }
 
     main {
@@ -414,4 +418,5 @@ tip-options-list li:nth-child(2) { grid-area: tip2; }
     .result-section span {
         font-size: 3rem;
     }
+
 }
