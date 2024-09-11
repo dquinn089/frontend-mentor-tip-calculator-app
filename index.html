@@ -15,20 +15,22 @@
 
 <body>
 
-  <picture class="logo">
-    <img src="images/logo.svg" alt="splitter">
-  </picture>
+  <header>
+    <picture class="logo">
+      <img src="images/logo.svg" alt="splitter">
+    </picture>
+  </header>
   
   <main>
 
-    <article class="input-section">
+    <form class="input-section"> <!-- Changed from article to form -->
       <div class="bill">
         <label for="bill-input">Bill</label>
         <input type="number" id="bill-input" placeholder="0">
       </div>
 
       <div class="tip-options">
-        <label for="tip-options-list">Select Tip %</label>
+        <label>Select Tip %</label> <!-- Removed the 'for' attribute as there's no corresponding input element -->
         <ul class="tip-options-list">
           <li id="tip-1">5%</li>
           <li id="tip-2">10%</li>
@@ -48,26 +50,26 @@
         </div>
         <input type="number" id="people-input" placeholder="0">
       </div>
-    </article>
+    </form>
 
     <div class="result-container">
       <section class="result-section">
         <div class="result-display">
-          <label for="tip-amount">
+          <div class="result-labels"> <!-- Replaced label with a div -->
             <h1>Tip Amount</h1>
             <p>/ person</p>
-          </label>
+          </div>
           <span id="tip-amount">$0.00</span>
         </div>
         <div class="result-display">
-          <label for="total-amount">
+          <div class="result-labels"> <!-- Replaced label with a div -->
             <h1>Total</h1>
             <p>/ person</p>
-          </label>
+          </div>
           <span id="total-amount">$0.00</span>
         </div>
       </section>
-      <button>RESET</button>
+      <button type="button">RESET</button> <!-- Added type="button" for reset functionality -->
     </div>
 
   </main>

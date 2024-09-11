@@ -42,7 +42,7 @@ main {
     gap: 1rem;
 }
 
-/* Article Section */
+/* Form Section */
 
 .input-section {
     display: flex;
@@ -153,7 +153,7 @@ input:focus {
 }
 
 .tip-options-list li:nth-child(1) { grid-area: tip1; }
-.tip-options-list li:nth-child(2) { grid-area: tip2; }
+tip-options-list li:nth-child(2) { grid-area: tip2; }
 .tip-options-list li:nth-child(3) { grid-area: tip3; }
 .tip-options-list li:nth-child(4) { grid-area: tip4; }
 .tip-options-list li:nth-child(5) { grid-area: tip5; }
@@ -260,6 +260,15 @@ input:focus {
     align-items: center;
 }
 
+.result-labels h1 { /* New styles for .result-labels */
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.result-labels p {
+    color: var(--grayish-cyan);
+}
+
 .result-container button {
     width: 100%;
     border: none;
@@ -273,6 +282,7 @@ input:focus {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .result-container button:hover {
     background-color: hsl(172, 65%, 65%);
 }

@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Handle tip option selection
     document.querySelectorAll('.tip-options-list li').forEach(item => {
         item.addEventListener('click', function() {
+            // Toggle the "selected" class
             if (this.classList.contains('selected')) {
                 this.classList.remove('selected');
             } else {
@@ -11,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Selecting elements
     const billInput = document.getElementById("bill-input");
     const peopleInput = document.getElementById("people-input");
     const peopleErrorMessage = document.getElementById("people-error");
@@ -20,19 +23,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalAmountDisplay = document.getElementById("total-amount");
     const resetButton = document.querySelector("button");
 
+    // Function to calculate the tip
     function calculateTip() {
         const billValue = parseFloat(billInput.value);
         const peopleValue = parseInt(peopleInput.value);
         let tipPercentage = 0;
 
-        // Check which tip option is selected, if any
+        // Check which tip option is selected
         tipOptions.forEach(item => {
             if (item.classList.contains('selected') && item.innerText.includes('%')) {
                 tipPercentage = parseFloat(item.innerText) / 100;
             }
         });
 
-        // If custom tip is provided
+        // If custom tip is selected and provided
         if (customTipInput.value && customTipInput.parentElement.classList.contains('selected')) {
             const customTipValue = parseFloat(customTipInput.value);
             if (!isNaN(customTipValue) && customTipValue > 0) {
@@ -56,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
             peopleInput.classList.remove('invalid');
         }
 
-        // Calculate total tip and tip per person
+        // Calculate total tip and per person amounts
         const totalTip = billValue * tipPercentage;
         const tipPerPerson = totalTip / peopleValue;
         const totalPerPerson = (billValue + totalTip) / peopleValue;
@@ -66,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         totalAmountDisplay.textContent = `$${totalPerPerson.toFixed(2)}`;
     }
 
-    // Event listeners
+    // Add event listeners
     billInput.addEventListener('input', calculateTip);
     peopleInput.addEventListener('input', calculateTip);
     tipOptions.forEach(item => item.addEventListener('click', calculateTip));
@@ -75,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Reset button functionality
     if (resetButton) {
         resetButton.addEventListener('click', function() {
+            // Clear inputs and reset values
             billInput.value = '';
             peopleInput.value = '';
             customTipInput.value = '';
