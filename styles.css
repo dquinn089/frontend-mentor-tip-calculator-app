@@ -260,7 +260,7 @@ tip-options-list li:nth-child(2) { grid-area: tip2; }
     align-items: center;
 }
 
-.result-labels h1 { /* New styles for .result-labels */
+.result-labels h1 {
     color: var(--white);
     font-size: 1rem;
 }
