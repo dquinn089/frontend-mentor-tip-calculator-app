@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+
+  <picture class="logo">
+    <img src="images/logo.svg" alt="splitter">
+  </picture>
+  
+  <main>
+
+    <article class="input-section">
+      <div class="bill">
+        <label for="bill-input">Bill</label>
+        <input type="number" id="bill-input" placeholder="0">
+      </div>
+
+      <div class="tip-options">
+        <label for="tip-options-list">Select Tip %</label>
+        <ul class="tip-options-list">
+          <li id="tip-1">5%</li>
+          <li id="tip-2">10%</li>
+          <li id="tip-3">15%</li>
+          <li id="tip-4">25%</li>
+          <li id="tip-5">50%</li>
+          <li id="tip-custom">
+            <input type="number" id="custom" placeholder="Custom">
+          </li>
+        </ul>
+      </div>
+
+      <div class="people">
+        <div class="input-labels">
+          <label for="people-input">Number of People</label>
+          <span id="people-error" class="error-message"></span>
+        </div>
+        <input type="number" id="people-input" placeholder="0">
+      </div>
+    </article>
+
+    <div class="result-container">
+      <section class="result-section">
+        <div class="result-display">
+          <label for="tip-amount">
+            <h1>Tip Amount</h1>
+            <p>/ person</p>
+          </label>
+          <span id="tip-amount">$0.00</span>
+        </div>
+        <div class="result-display">
+          <label for="total-amount">
+            <h1>Total</h1>
+            <p>/ person</p>
+          </label>
+          <span id="total-amount">$0.00</span>
+        </div>
+      </section>
+      <button>RESET</button>
+    </div>
+
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Dylan Q</a>.
+    </div>
+  </footer>
+
+</body>
+
+</html>
